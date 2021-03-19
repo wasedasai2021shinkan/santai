@@ -1,0 +1,327 @@
+<!doctype HTML>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>参加対応局</title>
+        <meta name="description" content="参加対応局">
+        <link rel="icon" type="png" href="logo.png">
+        <link rel="stylesheet" href="santai.css">
+    </head>
+
+    <body>
+        <header>
+            <!--▽▽ヘッダーロゴ▽▽-->
+                  <div class="logo1">
+                      <a href="#" id="headerlogo"><img src="headericon.png" class="hedlogo">
+                      </a>
+                  </div>
+            <!--△△ヘッダーロゴ△△-->
+            
+            
+            <!--▽▽ハンバーガーメニュー▽▽-->
+                  <div id="hamburger">
+                      <div class="icon">
+                          <span></span>
+                          <span></span>
+                          <span></span>
+                      </div>
+                  </div>
+            <!--△△ハンバーガーメニュー△△-->
+            
+             
+            <!--▽▽ハンバーガーメニューのリスト▽▽-->
+                  <nav class="sm navi">
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">早稲田祭について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">活動について</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">年間スケジュール</a></li>
+                      <li class="lili"><a  class="listwords" href="#">フォトギャラリー</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                   </ul>
+                 </nav>
+            <!--△△ハンバーガーメニューのリスト△△-->
+            
+        
+            <!--▽▽ヘッダーリスト▽▽-->
+                  <nav class="pc navi">  <!--pcクラスを追記-->
+                    <ul class="lists">
+                      <li class="lili"><a  class="listwords" href="#">代表挨拶</a></li>
+                      <li class="lili"><a  class="listwords" href="#">新歓イベント</a></li>
+                      <li class="lili"><a  class="listwords" href="#">連載記事</a></li>
+                      <li class="lili"><a  class="listwords" href="#">入会方法</a></li>
+                      <li class="lili"><a  class="listwords" href="#">お問い合わせ</a></li>
+                    </ul>
+                  </nav>
+            <!--△△ヘッダーリスト△△-->
+            
+                </header>
+            
+            
+            <!--▽▽jQuery▽▽-->
+                <script src="jquery-3.6.0.min.js"></script>
+                  <script>
+                    $('#hamburger').on('click', function(){
+                    $('.icon').toggleClass('close');
+                    $('.sm').slideToggle();
+                    });
+              
+                  </script>
+            <!--△△jQuery△△-->
+ 
+
+
+        <style>
+            header {
+    height: 60px;
+    width: 100%;
+    padding: 0px 0px;
+    background-color:#78c1cd;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    display: flex;
+  }
+  
+  
+  .lili:hover{
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+  
+  }
+  
+  .logo1 {
+    font-size: 25px;}
+    
+    .hedlogo{
+  height:55px;
+  width:55px;
+  margin-left:6px;
+    }
+    
+  
+  .hedlogo:hover  {
+    filter: alpha(opacity=85);
+    -moz-opacity: 0.85;
+    opacity: 0.85;
+   
+  }
+   .navi{
+    margin: 0 0 0 auto;
+  }
+  
+  .lists {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .listwords {
+    color: #eaf4fc;
+    text-decoration: none;
+    display: block;
+    line-height: 60px;
+    padding: 0 20px;
+  }
+  
+  .sm {
+    display: none;
+  }
+  .toppagelogo{
+    height:500px;
+    width:500px;
+    padding:400px;
+  margin:0 auto;
+  }
+  /*---------------------------------------------------------------*/
+  @media (max-width: 900px) {
+  
+    .pc {
+      display: none;
+    }
+  
+    #hamburger {
+      background-color: transparent;
+      position:relative;
+      float:right
+      cursor:pointer;
+      margin: 0 0 0 auto;
+      height: 60px;
+      width: 60px;
+    }
+  
+    .icon span {
+      position: absolute;
+      left: 15px;
+      width: 30px;
+      height: 4px;
+      background-color:#eaf4fc;
+      border-radius: 8px;
+      transition: ease 0.75s;
+    }
+  
+    .icon span:nth-of-type(1) {
+      top: 16px;
+    }
+    .icon span:nth-of-type(2) {
+      top: 28px;
+    }
+    .icon span:nth-of-type(3) {
+      bottom: 16px;
+    }
+  
+    .close span:nth-of-type(1) {
+      transform: rotate(45deg);
+      top: 28px;
+    }
+  
+    .close span:nth-of-type(2) {
+      opacity: 0;
+    }
+  
+    .close span:nth-of-type(3) {
+        transform: rotate(-45deg);
+        top: 28px;
+    }
+  
+    .sm {
+        top: 60px;
+        left: 0px;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        background-color: #78c1cd;
+        
+    
+    }
+  
+   .lists {
+      flex-direction: column;
+    }
+  
+    .listwords {
+      text-align: center; 
+      border-top: solid 0.5px #eaf4fc;
+    }
+  
+  
+  .list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+        </style>
+
+        <div class="titlephoto">
+        <img src="参加対応局.png" alt="参加対応局" width="100%" height="auto">
+        </div>
+
+        <div class="wrapper">
+
+         <h2>参加対応局とは</h2>
+        <p class="setsumei">
+          参加対応局は「花を咲かせる太陽であれ。」というモットーを掲げて活動しています。
+          参加団体・参加者と募集から早稲田祭当日までを共に歩む参加対応局員だからこそ感じることができる彼らの想いがあります。
+          そして、その想いに応えることができるのもまた二人三脚でずっと一緒に歩んできた参加対応局員だけです。
+          早稲田祭当日に参加団体・参加者がそれぞれの想いを形にし、輝いている姿や彼らからの感謝の言葉はとてつもない達成感や満足感を僕らに与えてくれます。
+          そんな「誰か」を輝かせることができる「あなた」も早稲田祭当日には最高に輝くことができるはずです。
+          また、参加対応局は100人を超える局員から構成される運スタの中で1番人数の多い局です。気の合う仲間に出会えること間違いなしです！ 
+          頑張る人の支えになりたい人、参加団体・参加者のサポートを通して最高の早稲田祭を創りたい人、たくさんの友達をつくりたい人など大歓迎！ 
+          みなさんと一緒に活動できることを局員一同、楽しみに待っています。
+
+        </p>
+        
+        <h3>○飲食物販売企画チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            飲食物販売企画の管理を行うチームです！ 早稲田祭には例年90以上の参加団体・参加者が飲食屋台を出店していて、その管理や対応が主な活動です。「文化祭と言えば、飲食屋台！」こんなイメージを持っている方も少なからずいるのではないでしょうか。昨年は新型コロナウイルスの影響で飲食屋台は中止を余儀なくされたため、出版展示企画の団体対応や参加団体の配信を担当しました！ 日本一の学園祭の飲食屋台、共に創りあげませんか？
+        </p>
+
+
+
+        <h3>◯大隈講堂前ステージ企画チーム
+        </h3>
+        <p>
+             <!-- チーム紹介の文字情報をここに入れる -->
+             キャンパス内ステージ企画の運営を行うチームです。キャンパス内ステージ企画には、規模もパフォーマンスも多種多様な参加団体・参加者が出演します。担当する団体さんを早稲田祭当日まで1番近くで支え、輝かしいパフォーマンスを創りあげるためのお手伝いをすることができます！ 
+また当日は、音響操作や警備など活動が幅広いため、早稲田祭の活気を肌で感じながら仕事をしたい人におすすめです！
+個性豊かなチーム員と一緒に早稲田祭のステージを盛りあげていきませんか？
+
+        </p>
+
+
+        <h3>○屋内企画チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            教室・講堂・どらま館など屋内企画の運営を行うチームです。例年早稲田祭で行われる企画数の約半分であるおよそ200企画を担当し、オンライン開催であった2020年も100以上の企画を運営しました。展示系や体験型の企画、ライブ系、ゲストを呼ぶ企画まで多種多様な企画にかかわり、ただ早稲田で過ごすだけでは感じることができない早稲田文化に触れられることが魅力です！ また、屋内企画チームは運営スタッフで1番の大所帯でとてもにぎやかなチーム！ たくさんのレクを通してチームの仲間とどんどん仲良くなっちゃいましょう！ 早稲田文化の多様さを感じたい、友達をたくさんつくりたい、レクで遊びまくりたい人！ ぜひ屋内企画チームへ！！
+        </p>
+
+        <h3>○キャンパス内ステージ企画チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            キャンパス内ステージ企画の運営を行うチームです。キャンパス内ステージ企画には、規模もパフォーマンスも多種多様な参加団体・参加者が出演します。担当する団体さんを早稲田祭当日まで1番近くで支え、輝かしいパフォーマンスを創りあげるためのお手伝いをすることができます！ 
+また当日は、音響操作や警備など活動が幅広いため、早稲田祭の活気を肌で感じながら仕事をしたい人におすすめです！
+個性豊かなチーム員と一緒に早稲田祭のステージを盛りあげていきませんか？
+
+        </p>
+
+        <h3>○ストリート企画チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            ストリート企画の運営を行うチームです。ストリート企画とは、大学構内にある屋外のスペースで行う企画です。ステージでも教室でもない、まさに’’道’’で行われるユニークさがこの企画の魅力です！ この企画に参加するのはパフォーマンスサークルから出版系サークル、展示系サークルなど多岐に渡ります！ 個性豊かな参加団体・参加者と直接関わってみませんか？ また、ストリート企画チームは実は昨年からできた新しいチーム。そして、とっても少人数なチームです。大きな運スタの中でアットホームな居場所が欲しいあなた！ ぜひこの新しいチームを一緒に組みあげましょう！
+        </p>
+
+        <h3>○早稲田アリーナ企画チーム
+        </h3>
+        <p>
+            <!-- チーム紹介の文字情報をここに入れる -->
+            早稲田アリーナ企画の運営を行うチームです。まだ始まって間もない企画のため今年も新たな試みがあり、新しいことに挑戦したい人や大規模な企画に携わりたい人などやる気あふれる人におすすめです。2020年の早稲田祭でも、早稲田アリーナで行われた企画の設営などを行いました！
+明るい雰囲気のチームで楽しい運営スタッフ生活を送れること間違いなし！ 私たちと早稲田アリーナ企画をさらに盛りあげませんか？
+
+        </p>
+    </div>
+    </body>
+    <footer>
+
+        <div class="wrapper2">
+            <p class="title">WASEDASAI OPERATION STAFF</br>SHINKAN 2021</p>
+            <div class="innerbox">
+                  
+                <a href="https://twitter.com/wasedasai_new?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" > 
+                    <img src="twitter.png" alt="twitter" width="80" height="80"　border="0"> 
+                </a>
+
+                <a href="https://www.instagram.com/wasedasai_new/" target="_blank" > 
+                    <img src="instagram.png" alt="instagram" width="80" height="80"　border="0"> 
+                </a>
+
+                <a href="https://qr-official.line.me/sid/M/011uqnra.png" target="_blank" > 
+                    <img src="line.png" alt="line" width="80" height="80"　border="0"> 
+                </a>
+
+                <a href="https://www.youtube.com/channel/UCFh9blapIkxPf4Al3L87QHQ" target="_blank" > 
+                    <img src="youtube.png" alt="youtube" width="80" height="80"　border="0"> 
+                </a>
+            </div>
+        </div>
+            <div class="footerlogo">
+                <a href="toppage.html" target="_blank" > 
+                    <img src="footerlogo.png" alt="footerlogo" width="40%" height="40%"　border="0"> 
+                </a>
+            </div>
+
+
+            </div>
+            <p><small>Copyright @ WASEDASAI2021 Staff All Rights Reserved. </small></p>
+        </div>
+    </footer>
+</html>
